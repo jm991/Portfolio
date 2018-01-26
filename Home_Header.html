@@ -3,11 +3,57 @@
     {
         (function()
         {
-			var txt1 = "<p>Using variable now</p>";
-			var img1 = "<img src='http://static1.squarespace.com/static/55bf49b0e4b09d989749e9c3/t/564644e8e4b05670121e41af/1447445736011/Guard.png' alt='' class='a' />";
+			var camoflaj = 
+				`
+				<div class='col span_1_of_3'>
+				  <div class='box'>
+					<div class='fadehover'>
+					  <a href='http://johnmcelmurray.com/camouflaj-1'>
+						<img src='http://static1.squarespace.com/static/55bf49b0e4b09d989749e9c3/t/564644e8e4b05670121e41af/1447445736011/Guard.png' alt='' class='a' />
+					  </a>
+					  <img src='http://static1.squarespace.com/static/55bf49b0e4b09d989749e9c3/t/564644f6e4b05670121e4265/1447445750071/Guard_Overlay.png' alt='' class='b' />
+					</div>
+					<a href='http://johnmcelmurray.com/camouflaj-1' class='divlink'>
+					  <div class='textOverlay'>
+						<div class='textCenter'>REPUBLIQUE EPISODE 1</div>
+					  </div>
+					</a>
+				  </div>
+				</div>
+				`;
 			
 			// Add columns for major pieces
-			$(".Index-page-content.sqs-alternate-block-style-container:eq(0)").prepend(txt1, img1);
+			$(".Index-page-content.sqs-alternate-block-style-container:eq(0)").prepend(camoflaj);
         })();
+		
+		
+		// fade anim
+		$(document).ready(function() {
+
+		  $(".textOverlay").hover(
+			function() {
+			  $(this).stop().animate({
+				"opacity": "1"
+			  }, "slow");
+			},
+			function() {
+			  $(this).stop().animate({
+				"opacity": "0"
+			  }, "slow");
+			});
+		  
+		  $("img.a").hover(
+			function() {
+			  $(this).stop().animate({
+				"opacity": "0"
+			  }, "slow");
+			},
+			function() {
+			  $(this).stop().animate({
+				"opacity": "1"
+			  }, "slow");
+			});
+
+		});      
     };
 </script>
