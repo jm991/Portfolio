@@ -2,7 +2,13 @@
     window.onload = function()
     {
         (function()
-        {
+        {				
+			var header = 
+				`
+				<div class='outer'>
+				  <div class='section group'>
+				`;
+				
 			var camoflaj = 
 				`
 				<div class='col span_1_of_3'>
@@ -21,9 +27,46 @@
 				  </div>
 				</div>
 				`;
+				
+			var norn = 
+				`
+				<div class='col span_1_of_3'>
+				  <div class='box'>
+					<div class='fadehover'><a href='http://johnmcelmurray.com/arenanet-art-test-1'><img src='http://static1.squarespace.com/static/55bf49b0e4b09d989749e9c3/t/56464509e4b05670121e432b/1447445769210/Norn.png' alt='' class='a' /></a><img src='http://static1.squarespace.com/static/55bf49b0e4b09d989749e9c3/t/56464497e4b08cbad44472d7/1447445655474/Norn_Overlay.png'
+						alt='' class='b' /></div>
+					<a href='http://johnmcelmurray.com/arenanet-art-test-1' class='divlink'>
+					  <div class='textOverlay'>
+						<div class='textCenter'>CHARACTER ART TEST</div>
+					  </div>
+					</a>
+				  </div>
+				</div>
+				`;
+				
+			var unity = 
+				`
+				<div class='col span_1_of_3'>
+				  <div class='box'>
+					<div class='fadehover'><a href='http://johnmcelmurray.com/unity-education-1'><img src='http://static1.squarespace.com/static/55bf49b0e4b09d989749e9c3/t/56464578e4b0fa024db20941/1447445880103/Unity.png' alt='' class='a' /></a><img src='http://static1.squarespace.com/static/55bf49b0e4b09d989749e9c3/t/564644a6e4b08cbad4447388/1447445670876/Unity_Overlay.png'
+						alt='' class='b' /></div>
+					<a href='http://johnmcelmurray.com/unity-education-1' class='divlink'>
+					  <div class='textOverlay'>
+						<div class='textCenter'>UNITY PROGRAMMING</div>
+					  </div>
+					</a>
+				  </div>
+				</div>
+				`;
+				
+			var footer =
+				`
+				  </div>
+				  <div class='spacer'></div>
+				</div>
+				`;
 			
 			// Add columns for major pieces
-			$(".Index-page-content.sqs-alternate-block-style-container:eq(0)").prepend(camoflaj);
+			$(".Index-page-content.sqs-alternate-block-style-container:eq(0)").prepend(header + camoflaj + norn + unity + footer);
         })();
 		
 		
