@@ -1167,6 +1167,10 @@ li.hyphen {
     margin-left: 1.0em;
 }
 
+li.hyphen-2 {
+    margin-left: 2.0em;
+}
+
 img.applogo {
     //margin:auto;
     margin-right: 30px;
