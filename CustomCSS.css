@@ -1,0 +1,1174 @@
+// region
+// Page margin
+.Main-content {
+    max-width: 85%;
+    margin: auto;
+}
+
+// endregion
+
+// region
+// Fluid YouTube ifram embedding
+// Source: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+//endregion
+
+
+// region
+// Homepage
+/* Responsive Square Grid of Images */
+
+
+/* Source: http://jsfiddle.net/webtiki/MpXYr/2/ */
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.sqs-block-content {
+    height: 100%;
+}
+
+div#page-563ab1b4e4b015da4e15810b {
+    height: 100%;
+}
+
+div#block-yui_3_17_2_1_1698791048227_2864 {
+    height: 100%;
+}
+
+.col.sqs-col-12.span-12 {
+    height: 100%;
+    margin: 0;
+}
+
+.row.sqs-row {
+    height: 100%;
+}
+
+.album {
+    height: 100%;
+    width: 100%;
+    /* margin-top: 5%; */
+}
+
+.projectsalbum {
+    height: 100%;
+    width: 100%;
+}
+
+.bg {
+    /* Full height */
+    height: 100%;
+    float: left;
+    position: relative;
+    width: 20%;
+    /* Center and scale the image nicely */
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* you change this to "contain" if you don't want the images to be cropped */
+}
+
+
+/* Window Re-layout */
+
+
+/* Source: http://www.responsivegridsystem.com/calculator/ */
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+
+    .bg {
+        width: 100%;
+        height: 20%;
+    }
+}
+
+
+/* Artstation overlays */
+
+
+/* Source: https://soulsurvivor.artstation.com/projects */
+
+.album-mosaic-inner {
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity .4s linear;
+    text-align: center;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.album-mosaic-inner:hover {
+    opacity: 1;
+}
+
+
+.title-font {
+    font-family: 'sofia-pro', 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    font-size: 150%
+}
+
+
+/* Keep brand images in div */
+/* Source: http://jsfiddle.net/Mottie/pu2p1u9g/ */
+.album-mosaic-inner img {
+    max-width: 100%;
+    max-height: 50%;
+    vertical-align: middle;
+}
+
+// endregion
+
+
+// region
+// Social links
+// Source: https://support.squarespace.com/hc/en-us/articles/205814468
+// Source: https://jsfiddle.net/jm991/emsd8o0q/3/
+body {
+    background: #2D2D34;
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 10px;
+    background: #fff;
+    color: black;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 22px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.social-icons a.twitter:hover {
+    color: #fff;
+    background: #00B6F3;
+}
+
+.social-icons a.li:hover {
+    color: #fff;
+    background: #0077b5;
+}
+
+.social-icons a.gh:hover {
+    color: #fff;
+    background: #24292e;
+}
+
+.social-icons a.yt:hover {
+    color: #fff;
+    background: #ff0000;
+}
+
+.social-icons a.ig:hover {
+    color: #fff;
+    background: #262626;
+}
+
+// endregion
+
+
+// region
+// Artstation-style project hover UI
+// Source: http://jsfiddle.net/jm991/Lxyp63dm/19/
+/* Responsive Square Grid of Images */
+/* Source: http://jsfiddle.net/webtiki/MpXYr/2/ */
+
+.square {
+    float: left;
+    position: relative;
+    width: 25%;
+    padding-bottom: 25%;
+    /* = width for a 1:1 aspect ratio */
+    margin: 0%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* you change this to "contain" if you don't want the images to be cropped */
+}
+
+
+/* Window Re-layout */
+/* Source: http://www.responsivegridsystem.com/calculator/ */
+/*  GO FULL WIDTH BELOW 640 PIXELS */
+
+@media only screen and (max-width: 1280px) {
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+
+    .square {
+        width: 33%;
+        padding-bottom: 33%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+
+    .square {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+}
+
+
+/* Artstation overlays */
+/* Source: https://soulsurvivor.artstation.com/projects */
+
+.album-mosaic-inner {
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity .4s linear;
+    text-align: center;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.album-mosaic-inner:hover {
+    opacity: 1;
+}
+
+.album-mosaic-project {
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 1.25rem;
+    word-break: break-word;
+}
+
+.album-mosaic-project:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5625rem;
+    width: 3.125rem;
+    height: 0.1875rem;
+    background: #ebbb0b;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.title-font {
+    font-family: 'sofia-pro';
+    text-transform: uppercase;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+}
+
+.album-mosaic-project-subtitle {
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 100;
+    text-transform: none;
+    font-family: proxima-nova;
+    font-weight: 100;
+    line-height: 1.2;
+}
+
+// endregion
+
+
+video.centeredvid {
+    display: block;
+    margin: auto;
+    max-height: 480px;
+    width: 100%;
+    height: 100%;
+}
+
+// Make mobile project rows on homepage clickable
+a.divlink {
+    display: block;
+    height: 100%;
+}
+
+// Remove top padding from homepage and apply bottom margin equal to height of reflection graphic
+.collection-type-index.title--description-position-over-image .title-desc-wrapper.has-main-image {
+    padding-top: 0;
+    padding-bottom: 115px;
+}
+
+// Remove bottom padding since there's no bottom aligned title image on mobile
+@media only screen and (max-width: 720px) {
+    .collection-type-index.title--description-position-over-image .title-desc-wrapper.has-main-image {
+        padding-top: 80px;
+        padding-bottom: 0;
+    }
+}
+
+// Center homepage image
+.responsive-container {
+    position: absolute;
+    width: 100%;
+    //border: 1px solid black;
+    bottom: 0px;
+    z-index: 100;
+    height: 25%;
+}
+
+//.responsive-container > img {
+//	object-fit: scale-down;
+//}
+
+.dummy {
+    //padding-top: 100%; /* forces 1:1 aspect ratio */
+}
+
+#imageHeader {
+    display: block;
+    margin: auto auto;
+    max-width:75%;
+    max-height:280px;
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+}
+
+#imageHeaderMobile {
+    visibility: hidden;
+}
+
+// BEGIN: Columns of major works on homepage
+.box {
+    // unneeded stuff for demo only
+    //width:70%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    //bottom:295px;
+    //box-shadow:0 0 0 3px #000 inset, 0 0 0 3000px rgba(white,.0);
+    overflow: hidden;
+
+    // The magic
+    /*> img{
+    position:relative;
+    z-index:-1;
+    top:0%;
+    left:50%;
+    width:100%;
+    transform:translate(-50%, 0%);
+    &.max{ width:auto; height:100%; }
+  }*/
+}
+
+
+/* RESET & stuff */
+/*html, body{ height:100%; overflow:hidden; }
+*{ margin:0; padding:0; }*/
+
+.outer {
+    height: 100%;
+    //position:absolute;
+    //display: inline-block;
+    //float:top;
+    //bottom:1px;
+    //margin-bottom:120px;
+    width: 100%;
+}
+
+/*  SECTIONS  */
+.section {
+    clear: both;
+    padding: 0px;
+
+    //background: #EEE;
+    margin: auto;
+    height: 100%;
+    padding: 0 25px;
+    max-width: 1000px;
+}
+
+
+img.a {
+    position: absolute;
+    //top:120px;
+    z-index: 2;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 0%);
+
+    &.max {
+        width: 100%;
+        height: auto;
+    }
+}
+
+img.b {
+    position: absolute;
+    z-index: 1;
+    //top:120px;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 0%);
+
+    &.max {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float: left;
+    margin: 0 0 1% 4%;
+    //background:pink;
+    height: 100%;
+    position: relative;
+}
+
+.col:first-child {
+    margin-left: 0;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+    /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+    width: 100%;
+}
+
+.span_2_of_3 {
+    width: 65.33%;
+}
+
+.span_1_of_3 {
+    width: 30.66%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 720px) {
+    .box {
+        bottom: 0px;
+    }
+
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+
+    .span_3_of_3,
+    .span_2_of_3,
+    .span_1_of_3 {
+        width: 100%;
+    }
+
+    .imageHeaderMobile {
+        visiblity: visible;
+    }
+
+    #imageHeader {
+        visibility: hidden;
+    }
+
+    #imageHeaderMobile {
+        visibility: visible;
+    }
+
+    .box {
+        bottom: 90px;
+    }
+
+    img.a {
+        top: 0px;
+    }
+
+    img.b {
+        top: 0px;
+    }
+
+    .textCenter {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .textOverlay {
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, 0%);
+
+        &.max {
+            width: 100%;
+            height: 100%;
+        }
+
+        opacity: 0.0;
+        background:rgba(0, 0, 0, 0.7);
+        color:white;
+        font-family:"sofia-pro";
+        font-weight:100;
+        font-size:2em;
+        line-height:normal;
+    }
+
+    .responsive-container {
+        visibility: hidden;
+    }
+
+    .span_3_of_3 {
+        height: 100%;
+    }
+
+    .span_2_of_3 {
+        height: 65.33%;
+    }
+
+    .span_1_of_3 {
+        height: 30.66%;
+    }
+}
+
+// JQuery Mousehover Fade Effect (FADEHOVER)
+div.fadehover {
+    position: relative;
+}
+
+// END: Columns of major works on homepage
+
+
+
+
+
+// Recolor/reposition arrow
+.parallax-item .scroll-arrow {
+    bottom: 5px;
+}
+
+.color-weight-light.scroll-arrow {
+    color: #FFF;
+}
+
+// Move titles to the bottom of the parallax (for all but first)
+div.title-desc-inner:not(first-of-type) {
+    max-width: 100%;
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+// Hide 1st section's headers paragraphs
+section#content-wrapper div.parallax-item:nth-of-type(3) div.title-desc-inner h1,
+section#content-wrapper div.parallax-item:nth-of-type(3) div.title-desc-inner p {
+    display: none !important;
+}
+
+// Reduce margins on headers
+.page-title-wrapper {
+    padding: 0px 20px 0px 20px;
+}
+
+// Reduce margins on subheaders
+.page-desc {
+    margin: 0;
+    padding: 0px 20px 15px 20px;
+}
+
+// Remove page header margins around logo
+// -- For desktop version of site --
+.title-nav-wrapper {
+    padding: 0 80px 25px 0;
+}
+
+// -- For tablet version of site --
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+    .title-nav-wrapper {
+        padding-left: 0 !important;
+        padding-top: 0 !important;
+        padding-right: 5% !important
+    }
+}
+
+// -- For mobile version of the site --
+@media only screen and (max-width: 768px) {
+    .title-nav-wrapper {
+        padding: 0 20px 20px 0 !important;
+    }
+}
+
+// Add top mobile and desktop margins for navigation since I removed it for the image header
+#desktopNav {
+    padding-top: 25px;
+}
+
+#mobileMenu {
+    padding-top: 20px;
+}
+
+.StatsImg {
+    display: block;
+    margin: auto;
+}
+
+.StatsH3 {
+    font-family: "proxima-nova";
+    font-size: 2.8em;
+    text-align: center;
+    margin: 0;
+}
+
+.StatsH2 {
+    font-family: "proxima-nova";
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: 100;
+    margin: 18px;
+}
+
+// STATS GRID RESPONSIVE
+/*  COLUMN SETUP  */
+.col4 {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col4:first-child {
+    margin-left: 0;
+}
+
+/*  GROUPING  */
+.group4:before,
+.group4:after {
+    content: "";
+    display: table;
+}
+
+.group4:after {
+    clear: both;
+}
+
+.group4 {
+    zoom: 1;
+    /* For IE 6/7 */
+}
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+    width: 100%;
+}
+
+.span_3_of_4 {
+    width: 74.6%;
+}
+
+.span_2_of_4 {
+    width: 49.2%;
+}
+
+.span_1_of_4 {
+    width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 720px) {
+    .col4 {
+        margin: 1% 0 1% 0%;
+    }
+
+    .span_1_of_4,
+    .span_2_of_4,
+    .span_3_of_4,
+    .span_4_of_4 {
+        width: 50%;
+    }
+}
+
+// STATS GRID RESPONSIVE END
+
+
+
+
+
+// To be moved into the Resume page
+/***************
+/* Corps - Main
+***************/
+
+/* responsive grid */
+/*  SECTIONS  */
+.sectionIcons {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+section[role=main] {
+    //padding: 21px 0;
+    overflow: hidden;
+}
+
+section[role=main]>div {
+    //margin-top: 32px;
+}
+
+// Grey line
+section[role=main] h3 {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0 0 10px 0;
+    margin-top: 0px;
+    position: relative;
+    font-size: 38px;
+    font-weight: 100;
+    color: #ebbb0b;
+}
+
+section[role=main] h3:after,
+h3:before {
+    content: ' ';
+    display: block;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: -15px;
+    width: 50px;
+}
+
+section[role=main] h3:before {
+    // blue circle icon
+    //background-color: #33a4c9;
+    border-radius: 25px;
+}
+
+/***************
+		/* Pictos titres
+		***************/
+
+/*section[role=main] h3:after {
+			background:url('../img/pictos-titre.png') no-repeat 11px 10px;
+		}
+
+		section[role=main] .competences h3:after {
+			background-position: 11px -34px;
+		}
+
+		section[role=main] .experiences h3:after {
+			background-position: 11px -86px;
+		}
+
+		section[role=main] .formations h3:after {
+			background-position: 10px -139px;
+		}
+
+		section[role=main] .loisirs h3:after {
+			background-position: 10px -250px;
+		}
+
+		section[role=main] .contact h3:after {
+			background-position: 11px -194px;
+		}*/
+ul {
+    -webkit-padding-start: 0;
+}
+
+.experiences ul,
+.formations ul {
+    //margin-left: 60px;
+}
+
+section[role=main] h4 {
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+section[role=main] h4 strong {
+    //color: #147393;
+    font-weight: normal;
+}
+
+.experiences li,
+.formations li {
+    //margin-bottom: 32px;
+}
+
+.experiences li:last-child,
+.formations li:last-child {
+    margin-bottom: 21px;
+}
+
+.experiences li p,
+.formations li p {
+    //margin-left: 30px;
+}
+
+/**********************************************
+	/* Affichage des compétences sous forme de tags
+	**********************************************/
+.competences .tags li {
+    background-color: #33a4c9;
+    border: 1px solid #1b91b7;
+    border-radius: 15px;
+    color: #fff;
+    display: inline-block;
+    line-height: 13px;
+    margin: 0 7px 17px 0;
+    padding: 5px 10px;
+}
+
+/************************************************
+	/* Affichage des compétences sous forme de barres
+	*************************************************/
+.competences .barres li {
+    margin-bottom: 21px;
+    position: relative;
+}
+
+.competences .barres li:after {
+    background: #e1e1e1;
+    bottom: -4px;
+    content: ' ';
+    display: block;
+    height: 5px;
+    position: absolute;
+    width: 100%;
+}
+
+.competences .barres li span {
+    background: #33a4c9;
+    bottom: -4px;
+    content: ' ';
+    display: block;
+    height: 5px;
+    left: 0;
+    position: absolute;
+    width: inherit;
+    z-index: 1;
+}
+
+/* responsive grid */
+/*  SECTIONS  */
+.sectionRes {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.colRes {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 4%;
+}
+
+.colRes:first-child {
+    margin-left: 0;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+    /* For IE 6/7 */
+}
+
+/*  GRID OF TWO  */
+.spanRes_2_of_2 {
+    width: 100%;
+}
+
+.spanRes_1_of_2 {
+    width: 48%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 720 PIXELS */
+
+@media only screen and (max-width: 720px) {
+    .colRes {
+        margin: 1% 0 1% 0%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .spanRes_2_of_2,
+    .spanRes_1_of_2 {
+        width: 100%;
+    }
+}
+
+/**********
+/* Grille - 960.gs
+**********/
+.container_16 {
+    //max-width: 960px;
+    //width: 92%;
+    margin: 0 auto;
+}
+
+.grid_6,
+.grid_8,
+.grid_10,
+.grid_16 {
+    display: inline;
+    float: left;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.container_16 .grid_6 {
+    width: 35.5%;
+}
+
+.container_16 .grid_8 {
+    width: 48.0%;
+}
+
+.container_16 .grid_10 {
+    width: 60.5%;
+}
+
+.container_16 .grid_16 {
+    width: 98.0%;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+
+/**********
+/* Header
+**********/
+header[role=banner] {
+    //background:#fff;
+    // blue line on the bottom
+    //border-bottom:4px solid #33a4c9;
+    padding: 19px 0;
+    overflow: hidden;
+}
+
+header figure {
+    //border: 3px solid #eee;
+    border-radius: 78px;
+    float: right;
+    height: 156px;
+    width: 156px;
+}
+
+header figure img {
+    border-radius: 75px;
+    height: 150px;
+    position: relative;
+    width: 150px;
+}
+
+header hgroup {
+    float: left;
+    padding: 42px 0;
+}
+
+header hgroup h1 {
+    color: #555;
+    //font-family:'DroidSansBold', Arial, sans-serif;
+}
+
+header hgroup h2 {
+    color: #cecece;
+    font-style: italic;
+    //text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+}
+
+
+
+
+
+/***********
+	/* Pictos
+	***********/
+.lieu,
+.dates,
+.phone,
+.mail,
+.site,
+.form,
+{
+background: url('../img/pictos-gris.png') no-repeat;
+//padding-left: 25px;
+margin: 0 25px 0 0;
+}
+
+.lieu {
+    background-position: 0 -2px;
+    color: #999;
+}
+
+.light {
+    font-style: italic;
+}
+
+.bigtext {
+    font-weight: 100;
+    font-size: 18px
+}
+
+.rtmargin {
+    margin: 0 30px 0 0;
+}
+
+.dates {
+    background-position: 0 -22px;
+    color: #999;
+}
+
+.phone {
+    background-position: 0 -40px;
+}
+
+.mail {
+    background-position: 0 -58px;
+}
+
+.site {
+    background-position: 0 -80px;
+}
+
+.form {
+    background-position: 0 -100px;
+}
+
+ul.hyphen {
+    list-style-type: none;
+}
+
+ul.hyphen>li:before {
+    content: "–";
+    /* en dash here */
+    position: absolute;
+    margin-left: -1.0em;
+}
+
+li.hyphen {
+    margin-left: 1.0em;
+}
+
+img.applogo {
+    //margin:auto;
+    margin-right: 30px;
+    display: block;
+}
+
+span.spacer {
+    margin-bottom: 32px;
+}
