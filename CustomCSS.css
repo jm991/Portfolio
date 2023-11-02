@@ -1098,7 +1098,18 @@ header hgroup h2 {
     //text-shadow: 1px 1px 0 rgba(0,0,0,.3);
 }
 
-
+// Hexagon NavBg image on all page headers' top right corner
+//.Header-inner {
+.Intro {
+    /* background-color: #f0523d; */
+    background-image: url(https://images.squarespace-cdn.com/content/55bf49b0e4b09d989749e9c3/1447468337867-50KI20KYS5XV2HOW7RMB/NavBg.png);
+    background-size: auto;
+    /* width: 300px; */
+    /* height: 65px; */
+    /* min-height: 150px; */
+    background-repeat: no-repeat;
+    background-position: top right;
+}
 
 
 
