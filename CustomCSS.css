@@ -856,9 +856,6 @@ section[role=main] h3:before {
 		section[role=main] .contact h3:after {
 			background-position: 11px -194px;
 		}*/
-ul {
-    -webkit-padding-start: 0;
-}
 
 .experiences ul,
 .formations ul {
@@ -1177,6 +1174,7 @@ margin: 0 25px 0 0;
 
 ul.hyphen {
     list-style-type: none;
+    -webkit-padding-start: 0;
 }
 
 ul.hyphen>li:before {
