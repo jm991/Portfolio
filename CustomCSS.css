@@ -1111,6 +1111,10 @@ header hgroup h2 {
     background-position: top right;
 }
 
+// Hide the header image/text at the top of all the pages
+.Header-branding {
+    display: none !important;
+}
 
 
 /***********
