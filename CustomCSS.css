@@ -1172,6 +1172,11 @@ margin: 0 25px 0 0;
     background-position: 0 -100px;
 }
 
+ul.competences {
+    list-style-type: none;
+    -webkit-padding-start: 0;
+}
+
 ul.hyphen {
     list-style-type: none;
     -webkit-padding-start: 0;
