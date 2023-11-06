@@ -1112,6 +1112,9 @@ header hgroup h2 {
 .Header-branding {
     display: none !important;
 }
+.Mobile-bar-branding {
+    display: none !important;
+}
 
 
 /***********
