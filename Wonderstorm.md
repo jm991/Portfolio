@@ -7,6 +7,19 @@ Here's a summary of the areas of the game that I have worked on during my time a
 ### **Characters**
 - Developed character pipeline that allowed the art and design team to build 11 playable heroes, over 70 unique enemy NPCs, and 6 set-piece world bosses
 - Designed a "phase" system for bosses, leveraging a finite state machine that designers could use to control the boss's animation set, available abilities, and AI behavior, utilizing our custom syntax for expressing state change transition conditions
+- Items, inventory, and loadouts
+  - Created the system for updating a character's loadout on-the-fly, allowing items to be picked up, equipped, or unequipped mid-mission
+  - Wrote the data types and C++ logic for all equippable item types, including weapons, accessories, consumables, and cosmetics (character and weapon specific skins, pets, and chromas)
+- Character Stats
+  - Leveraged the Unreal [Gameplay Attributes and Gameplay Effects](https://docs.unrealengine.com/4.27/en-US/InteractiveExperiences/GameplayAbilitySystem/GameplayAttributesAndGameplayEffects/) to handle all of our character and item stats
+  - Each playable hero and NPC in the game had a set of base stats, stats that were unlocked as the character leveled up, and stats from their equipment/loadout
+- Hero progression/ability unlocks
+  - Authored the data types and system for designers to create the hero progression for our playable characters
+  - Including the XP curve for leveling, which abilities the character starts with, what level their other abilities unlock at, equipment slot unlocks, and passive unlocks
+- NPC difficulty scaling system
+  - Based on the level of the NPC, attributes of NPCs would be scaled (including their health, poise, and outgoing damage) based on designer-defined tables
+  - Designers could use the level of the NPC to control which abilities were available for use in the AI ability selection logic, locking some abilities for higher level versions of the enemy
+  - Artists were also able to modify the skeletal meshes, weapon visuals, and VFX of higher level NPCs
 
 ### **Gameplay Ability System**
 - Integrated [Unreal's Gameplay Ability System](https://docs.unrealengine.com/en-US/gameplay-ability-system-for-unreal-engine/) plugin into our project
@@ -100,10 +113,8 @@ Here's a summary of the areas of the game that I have worked on during my time a
   - This allowed our designers to keep much of our game's data in text rather than only relying on Blueprint, reducing the overall amount of runtime code to maintain in our game, as well as providing easier collaboration, reviewing, merging, and diff'ing (since our game data was in text rather than binary uassets)
   - I also wrote a translation layer between blueprint and our custom scripting, so that designers could always fall back on Blueprint if they needed it
 
-### **Systems design (platform requests + UI)**
-- Items/Inventory/Loadouts
-  - Created the system for updating a character's loadout on-the-fly, allowing items to be picked up/equipped/unequipped mid-mission
-  - Wrote the data types and C++ logic for equippable cosmetics, including character and weapon specific skins, pets, and chromas
+### **Systems design**
+I was often relied upon as the point-person to help implement overarching systems in our game, since I was able to effectively translate designer feature requests into requirements, work with the UX team to implement their wireframes as in-game UI, and create the APIs with the platform team to bring features to life.
 - Quests
   - Collaborated with the platform team to create a robust and flexible Quest system, which allowed for cross-mission progression and...
     - Unlock requirements, and integration with the dialog system for players to be granted quests from speaking with NPC "operators"
@@ -111,20 +122,22 @@ Here's a summary of the areas of the game that I have worked on during my time a
     - Rewards (both XP and loot)
     - UI data for displaying different descriptions and flavor text based on the state of the quest completion
 - Objectives
-  - Our objectives system was our in-mission "to-do" list for players
+  - Our objectives system was our in-mission "to-do" list for players, and could be "scoped" to individual sections of our dungeons, or span across the entire map
+  - Authored C++ data-driven finite state machine that allowed designers to control the flow of the objective through various states, each with their own visuals/UI to display to the player, and logic to replicate the current state to all connected clients
 - Missions
-  - Requirements
-  - Modifiers
-- Difficulty
-- Scaling NPCs' attributes and modifying their visuals
-- Character Stats
-- Crafting and Upgrading
+  - Worked with design to create the data structures for missions and regions in our game
+  - Created the system for hiding/revealing missions in our UI, and unlock requirements for mission progression
+  - Worked with the design team to create our Difficulty system, which controlled the distribution of the levels of NPCs that spawn, loot tables, random mission modifiers to increase difficulty and replayability, and which NPCs were allowed to spawn
 - Stores (buying and selling inventory items)
-- Hero progression/ability unlocks
+  - Worked with the platform team to implement the purchase flow and data structures for designers to define costs and requirements for purchasing store entries
+  - I also created a data-driven system to allow designers to easily re-skin the store UI and control what items were for sale and which items the player could sell back to the shopkeeper
+- Crafting and Upgrading
+  - Worked on data structures with design to author both weighted-random and player-selected item upgrade skill trees
+  - Created UI for players to purchase and select item upgrades
 - Checkpoints/Retry
   - Experienced with Unreal's [Server Travel](https://docs.unrealengine.com/en-US/InteractiveExperiences/Networking/Travelling/) feature, which I leveraged to create our checkpointing/retry system
   - When players reached specific designer-authored re-group points in the level, both player/character data and game state data would be cached, and if players were defeated, the world would reset, and the players would be teleported back to the most recent checkpoint and have the player and game states rest
-- Tutorial
+- Tutorial/First time user experience
   - Worked together with the lead level designer to create our in-game combat tutorial that progressively unlocked the player's abilities and taught them how to use each ability
   - In addition to the in-game tutorial, I also created the menu walkthrough, which guided the player through the menus, teaching them how the game's interface works
 
